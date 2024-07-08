@@ -1,9 +1,19 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
     <>
-    <p className="font-MuseoModerno">Font </p>
+      <div className="h-screen flex items-center justify-center text-9xl">
+        BODY
+      </div>
+
+      {/*Move it to Footer folder */}
+      <div className="grid sticky bottom-0 left-5 bg-[#401A33] items-center justify-center grid-flow-row w-12 h-52 rounded-2xl ">
+        <div>💀</div>
+        <div>💀</div>
+        <div>💀</div>
+        <div>💀</div>
+        <div>💀</div>
+      </div>
     </>
   );
 }

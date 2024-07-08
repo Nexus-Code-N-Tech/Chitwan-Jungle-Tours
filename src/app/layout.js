@@ -1,5 +1,6 @@
 import { Inter, MuseoModerno, Poppins, Murecho, Museo } from "next/font/google";
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header/Top";
 import "./globals.css";
 
 const museo = MuseoModerno({
@@ -22,7 +23,6 @@ export const metadata = {
   title: "Chitwan Junle Tours",
   description: "Chitwan Jungle Tours, Sauraha-Chitwan, Nepal",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -37,7 +37,9 @@ export default function RootLayout({ children }) {
           murecho.variable
         }
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
