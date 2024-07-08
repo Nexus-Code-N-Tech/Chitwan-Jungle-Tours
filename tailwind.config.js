@@ -74,7 +74,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily:{
-        MuseoModerno: ["var(--font-museo)"]
+        MuseoModerno: ["var(--font-museo)"],
+        Poppins: ["var(--font-poppins)"],
+        Murecho : ["var(--font-murecho)"],
       }
     },
   },
