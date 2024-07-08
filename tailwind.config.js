@@ -1,3 +1,5 @@
+const { MuseoModerno } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -71,6 +73,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily:{
+        MuseoModerno: ["var(--font-Museo)"]
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
