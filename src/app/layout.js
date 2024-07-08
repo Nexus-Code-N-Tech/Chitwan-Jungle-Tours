@@ -2,7 +2,6 @@ import { Inter, MuseoModerno, Poppins, Murecho, Museo } from "next/font/google";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const museo = MuseoModerno({
   subsets: ["latin"],
   weight: "400",
@@ -29,7 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={
-          inter.className +
+          poopins.className +
           " " +
           museo.variable +
           " " +
