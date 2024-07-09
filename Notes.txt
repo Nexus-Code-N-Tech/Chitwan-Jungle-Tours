@@ -1,0 +1,7 @@
+1. REPLACE 💀 with appropriate stuff
+2. Put icons in public/appropriate_folder_name
+--EX. For images that will be used in landing page:public/Home and used in Contact page,public/contact
+--Put in public/global for imags that will be used in all pages
+
+btw, follow me in github😅
+https://github.com/CodeCarbon 
