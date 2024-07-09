@@ -22,27 +22,25 @@ export default function Home() {
       {/* Section Brief Itinerary */}
       <div className="Section-BriefItinerary py-8">
         <div className="container mx-auto px-4">
-          <div className="mt-8">
-            <h3 className="text-center text-3xl font-bold mb-4">
-              Brief Itinerary
-            </h3>
-            <ul className="list-disc pl-8">
-              <li className="mb-3 text-lg">Day 1: Welcome to Kathmandu!</li>
-              <li className="mb-3 text-lg">Day 2: Explore Kathmandu</li>
-              <li className="mb-3 text-lg">
-                Day 3: Fly Kathmandu to Chitwan (Bharatpur)
-              </li>
-              <li className="mb-3 text-lg">Day 4: Jeep and foot safari</li>
-              <li className="mb-3 text-lg">
-                Day 5: Boat safari down the river to the Tiger Tops Tharu Lodge
-              </li>
-              <li className="mb-3 text-lg">Day 6: A day with the elephants</li>
-              <li className="mb-3 text-lg">
-                Day 7: Last morning in Chitwan; Fly back to Kathmandu
-              </li>
-              <li className="mb-0 text-lg">Day 8: Depart Kathmandu</li>
-            </ul>
-          </div>
+          <h3 className="text-center text-3xl font-bold mb-4">
+            Brief Itinerary
+          </h3>
+          <ul className="list-disc pl-8">
+            <li className="mb-3 text-lg">Day 1: Welcome to Kathmandu!</li>
+            <li className="mb-3 text-lg">Day 2: Explore Kathmandu</li>
+            <li className="mb-3 text-lg">
+              Day 3: Fly Kathmandu to Chitwan (Bharatpur)
+            </li>
+            <li className="mb-3 text-lg">Day 4: Jeep and foot safari</li>
+            <li className="mb-3 text-lg">
+              Day 5: Boat safari down the river to the Tiger Tops Tharu Lodge
+            </li>
+            <li className="mb-3 text-lg">Day 6: A day with the elephants</li>
+            <li className="mb-3 text-lg">
+              Day 7: Last morning in Chitwan; Fly back to Kathmandu
+            </li>
+            <li className="mb-0 text-lg">Day 8: Depart Kathmandu</li>
+          </ul>
         </div>
       </div>
 
