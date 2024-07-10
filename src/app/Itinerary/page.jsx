@@ -2,6 +2,7 @@ import Image from "next/image";
 import rhinoceros from "../../../public/rhinoceros.png";
 import { MuseoModerno } from "next/font/google";
 
+
 const museoModerno = MuseoModerno({
   weight: "600",
   subsets: ["latin"],
