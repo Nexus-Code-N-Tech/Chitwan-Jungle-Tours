@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Itinerary from "@/components/Itinerary/Itinerary";
 import Plans from "@/components/Plans/Plans";
 
 export default function Home() {
   return (
     <>
-    <Itinerary />
+    
     
       
 
