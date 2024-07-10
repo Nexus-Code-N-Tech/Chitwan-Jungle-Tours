@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Plans from "@/app/Plans/Plans";
+// import Image from "next/image";
+// import Plans from "@/app/Plans/Plans";
 
 export default function Home() {
   return (
