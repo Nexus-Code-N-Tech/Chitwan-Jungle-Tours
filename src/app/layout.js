@@ -10,7 +10,7 @@ const museo = MuseoModerno({
 });
 const poopins = Poppins({
   subsets: ["latin"],
-  weight: "400",
+  weight: "500",
   variable: "--font-poppins",
 });
 const murecho = Murecho({
