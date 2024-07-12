@@ -1,12 +1,5 @@
 import Image from "next/image";
 import rhinoceros from "../../../public/rhinoceros.png";
-import { MuseoModerno } from "next/font/google";
-
-
-const museoModerno = MuseoModerno({
-  weight: "600",
-  subsets: ["latin"],
-});
 
 export default function Itinerary(){
     return (
@@ -16,7 +9,7 @@ export default function Itinerary(){
         <Image className="w-full bg-cover bg-center" src={rhinoceros} />
         <div className="absolute top-1/2 left-1/2 -translate-x-14 translate-y-44">
       <p
-        className={`${museoModerno.className} text-white text-6xl font-bold`}
+        className={`font-MuseoModerno text-white text-6xl font-bold`}
       >
         Itinerary
       </p>
