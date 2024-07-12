@@ -1,11 +1,13 @@
 // import Image from "next/image";
 // import Plans from "@/app/Plans/Plans";
 
+import Itinerary from "@/components/HomePage/Hero";
+
 export default function Home() {
   return (
     <>
     
-    
+      <Itinerary />
       
 
       {/*Move it to Footer folder */}
@@ -15,6 +17,8 @@ export default function Home() {
         <div>💀</div>
         <div>💀</div>
         <div>💀</div>
+
+
       </div>
     </>
   );
