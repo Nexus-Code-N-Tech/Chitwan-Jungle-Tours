@@ -1,5 +1,5 @@
 import Image from "next/image";
-import rhinoceros from "../../../public/rhinoceros.png";
+import rhinoceros from "../../../public/assets/rhinoceros.png";
 
 export default function Itinerary() {
   return (
