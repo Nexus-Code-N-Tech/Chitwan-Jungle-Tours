@@ -20,20 +20,12 @@ export default function Itinerary() {
     <>
       {/* Section Itinerary Hero */}
       <div className="Section-ItineraryHero relative h-screen">
-        <Image
-          className="w-full h-full object-cover"
-          src={rhinoceros}
-          alt="Rhinoceros"
-        />
+        <Image className="w-full h-full object-cover" src={rhinoceros} alt="Rhinoceros" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
-          <p
-            className={`${museoModerno.className} text-white text-6xl font-bold mb-4`}
-          >
+          <p className={`${museoModerno.className} text-white text-6xl font-bold mb-4`}>
             YOUR JOURNEY, OUR EXPERTISE!
           </p>
-          <p
-            className={`${museoModerno.className} text-white text-3xl font-bold`}
-          >
+          <p className={`${museoModerno.className} text-white text-3xl font-bold`}>
             Adventure Deeper
           </p>
         </div>
@@ -43,9 +35,7 @@ export default function Itinerary() {
       <div className="Section-Overview pt-16 py-9">
         <div className="container xl mx-auto flex flex-col md:flex-row items-center md:items-start">
           <div className="md:w-1/2 md:pl-8 md:pr-8">
-            <h2
-              className={`${museoModerno.className} text-black text-3xl font-bold`}
-            >
+            <h2 className={`${museoModerno.className} text-black text-3xl font-bold`}>
               Explore <br />
               beyond <br />
               boundaries
@@ -53,8 +43,7 @@ export default function Itinerary() {
           </div>
           <div className="md:w-1/2">
             <p className={`${poppins.className} text-left text-lg`}>
-              With 20+ years in tour guiding, adventure, cross-cultural
-              exploration, we design the perfect journey for you.
+              With 20+ years in tour guiding, adventure, cross-cultural exploration, we design the perfect journey for you.
               <br />
               <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
                 <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -68,9 +57,7 @@ export default function Itinerary() {
 
       {/* Section with Images and Text */}
       <div className="container mx-auto py-9">
-        <h2
-          className={`${museoModerno.className} text-black text-2xl font-bold text-center mb-4`}
-        >
+        <h2 className={`${museoModerno.className} text-black text-2xl font-bold text-center mb-4`}>
           Explore organizational services
         </h2>
         <div className="flex justify-center space-x-4">
