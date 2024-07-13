@@ -56,14 +56,16 @@ export default function () {
         </Link>
         <Link href="/">Gallery</Link>
         <div className="relative h-full w-1/6">
-          <Image
-            src={"/global/tours.png"}
-            priority={true}
-            alt="Website Icon"
-            fill
-          />
+          <Link href="/">
+            <Image
+              src={"/global/tours.png"}
+              priority={true}
+              alt="Website Icon"
+              fill
+            />
+          </Link>
         </div>
-        <Link href="/">Why Sauraha</Link>
+        <Link href="/itinerary">Why Sauraha</Link>
         <div className="md:block hidden">
           <Phone fill={"#7C992E"} /> <span>800-255-8735</span>
         </div>
