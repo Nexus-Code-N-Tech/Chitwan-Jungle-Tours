@@ -1,5 +1,5 @@
 import Image from "next/image";
-import rhinoceros from "../../../public/rhinoceros.png";
+import rhinoceros from "../../../public/assets/rhinoceros.png";
 import { MuseoModerno } from "next/font/google";
 
 const museoModerno = MuseoModerno({
