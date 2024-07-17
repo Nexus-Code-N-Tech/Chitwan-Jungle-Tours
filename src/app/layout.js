@@ -1,4 +1,11 @@
-import { Inter, MuseoModerno, Poppins, Murecho, Museo } from "next/font/google";
+import {
+  Inter,
+  MuseoModerno,
+  Poppins,
+  Murecho,
+  Museo,
+  Cedarville_Cursive,
+} from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Top";
 import "./globals.css";
@@ -10,7 +17,7 @@ const museo = MuseoModerno({
 });
 const poopins = Poppins({
   subsets: ["latin"],
-  weight: "500",
+  weight: "400",
   variable: "--font-poppins",
 });
 const murecho = Murecho({
@@ -19,8 +26,14 @@ const murecho = Murecho({
   variable: "--font-murecho",
 });
 
+const cursive = Cedarville_Cursive({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-cursive",
+});
+
 export const metadata = {
-  title: "Chitwan Junle Tours",
+  title: "Chitwan Jungle Tours",
   description: "Chitwan Jungle Tours, Sauraha-Chitwan, Nepal",
 };
 export default function RootLayout({ children }) {
@@ -34,7 +47,9 @@ export default function RootLayout({ children }) {
           " " +
           poopins.variable +
           "" +
-          murecho.variable
+          murecho.variable +
+          "" +
+          cursive.variable
         }
       >
         <Header />

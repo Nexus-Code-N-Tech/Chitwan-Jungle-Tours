@@ -48,10 +48,10 @@ export default function () {
 
       <div className="flex w-full font-MuseoModerno h-16  max-md:text-sm  items-center justify-evenly lg:-space-x-14 xl:-space-x-20">
         <Menu />
-        <Link href="#" className="sm:hidden">
+        <Link href="/plans" className="sm:hidden">
           Packages
         </Link>
-        <Link href="#" className="max-sm:hidden">
+        <Link href="/plans" className="max-sm:hidden">
           Packages & Plans
         </Link>
         <Link href="/">Gallery</Link>
