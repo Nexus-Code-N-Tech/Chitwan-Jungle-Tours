@@ -70,7 +70,7 @@ export default function () {
           <Phone fill={"#7C992E"} /> <span>800-255-8735</span>
         </div>
         <Link
-          href={"#"}
+          href="/contact"
           className="border-2 border-[#00B300] h-9 w-20 lg:h-10 lg:w-24 rounded-full items-center justify-center flex"
         >
           Contact

@@ -137,7 +137,7 @@ const PlanDetails = () => {
               </div>
               <div className="text-center mt-8">
                 <a
-                  href=""
+                  href="/contact"
                   className="py-3 px-6 bg-white text-green-600 font-bold text-sm rounded-3xl hover:text-white hover:bg-green-600"
                 >
                   Request a Plan
