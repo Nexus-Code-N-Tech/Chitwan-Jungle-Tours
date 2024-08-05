@@ -35,6 +35,7 @@ const cursive = Cedarville_Cursive({
 export const metadata = {
   title: "Chitwan Jungle Tours",
   description: "Chitwan Jungle Tours, Sauraha-Chitwan, Nepal",
+  icon:"contact-favicon.svg"
 };
 export default function RootLayout({ children }) {
   return (
