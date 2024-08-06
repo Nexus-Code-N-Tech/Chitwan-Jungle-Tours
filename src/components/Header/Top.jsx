@@ -54,7 +54,7 @@ export default function () {
         <Link href="/plans" className="max-sm:hidden">
           Packages & Plans
         </Link>
-        <Link href="/">Gallery</Link>
+        <Link href="/gallery">Gallery</Link>
         <div className="relative h-full w-1/6">
           <Link href="/">
             <Image
