@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Menu from "./Icons/Menu";
 import Phone from "../SVG/phone";
 import Location from "./Icons/Loaction";
 import Facebook from "../SVG/facebook";
@@ -47,14 +46,12 @@ export default function () {
         </div> */}
 
       <div className="flex w-full max-sm:gap-2 p-2 font-MuseoModerno h-16 max-md:text-sm  items-center justify-evenly lg:-space-x-14 xl:-space-x-20">
-        <Menu />
-        <Link href="/plans" className="sm:hidden">
-          Packages
-        </Link>
-        <Link href="/plans" className="max-sm:hidden">
+        
+        <Link href="/plans" className="">
           Packages & Plans
         </Link>
         <Link href="/gallery">Gallery</Link>
+          <Link href="/itinerary">Why Sauraha</Link>
         <div>
           <Link href="/">
             <Image
@@ -66,7 +63,6 @@ export default function () {
             />
           </Link>
         </div>
-        <Link href="/itinerary">Why Sauraha</Link>
         <div className="md:block hidden">
           <Phone fill={"#7C992E"} /> <span>800-255-8735</span>
         </div>

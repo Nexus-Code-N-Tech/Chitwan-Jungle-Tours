@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+
+import "./gallery.css";
+
 import {
   Pagination,
   PaginationContent,
@@ -46,13 +49,13 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="relative flex">
+      <div className="position relative flex">
         <Image
-          src="/assets/rhinoceros.png"
+          src="/assets/j61.png"
           alt="Gallery Banner"
           width={1920}
           height={1080}
-          className="w-full h-auto bg-cover bg-center rounded-tl-[250px] rounded-br-[250px]"
+          className="w-full bg-cover bg-center rounded-tl-[16rem] rounded-br-[16rem]"
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 max-md:-bottom-2 max-lg:-bottom-1 max-xl:bottom-0 max-2xl:bottom-1">
           <p className="font-MuseoModerno text-white text-[5rem] font-bold tracking-[2px] max-md:text-[2rem] max-lg:text-[3rem] max-xl:text-[4rem] max-2xl:text-[5rem]">
@@ -61,23 +64,32 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="container mx-auto px-2 py-[5rem]">
-        <div className="grid grid-cols-2 md:grid-cols-3">
-          {paginatedItems.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={200}
-                height={200}
-                className="w-full sm:size-[12rem] md:size-[15rem] lg:size-[17rem] xl:size-[19rem] 2xl:size-[21rem] object-cover rounded-[2rem] cursor-pointer transition ease-in hover:opacity-80"
-              />
-              <span className="text-black font-bold text-md sm:text-base md:text-lg lg:text-xl my-[1rem] font-MuseoModerno text-center cursor-pointer">
-                {item.text[0]} <br className="md:inline lg:hidden" />{" "}
-                {item.text[1]}
-              </span>
-            </div>
-          ))}
+      <div className="position">
+        <hr className="bg-[#990033] h-1 " />
+
+        <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl">
+          Captured photos
+        </h2>
+      </div>
+      <div className="container mx-auto max-md:px-4">
+        <div className="bg-gray-300 rounded-2xl rounded-bl-full container mx-auto px-2">
+          <div className="my-10 mx-8 gap-8 grid grid-cols-2 max-sm:gap-4 md:grid-cols-3">
+            {paginatedItems.map((item, index) => (
+              <div key={index} className="flex flex-wrap items-center">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={200}
+                  height={100}
+                  className="w-full sm:size-[4rem] md:size-[15rem] lg:size-[17rem] xl:size-[19rem] 2xl:size-[21rem] object-cover rounded-[2rem] cursor-pointer transition ease-in hover:opacity-80"
+                />
+                <span className="text-black font-bold w-full text-md sm:text-base md:text-lg lg:text-xl my-[1rem] font-MuseoModerno text-center cursor-pointer">
+                  {item.text[0]} <br className="md:inline lg:hidden" />{" "}
+                  {item.text[1]}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
