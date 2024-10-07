@@ -4,11 +4,16 @@
   max-width: 1200px;
 }
 
-.rounded-bl-full {
+.rounded-bl {
   padding: 20px 16px;
   margin: 0 auto;
   max-width: 1200px;
-  border-bottom-left-radius: 180px;
+  border-bottom-left-radius: 120px;
+}
+
+.rounded-bl-full {
+  border-bottom-left-radius: 150px;
+} */
 
 .overview {
   font-weight: 700;
