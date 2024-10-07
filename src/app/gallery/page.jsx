@@ -49,9 +49,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="position rounded-2xl py-36">
-      <section className="Section-ItineraryHero relative flex">
-
+      <div className="position rounded-2xl py-36 relative flex">
         <Image
           src="/assets/j61.png"
           alt="Gallery Banner"
@@ -64,7 +62,6 @@ export default function Gallery() {
             Gallery
           </p>
         </div>
-        </section>
       </div>
 
       <div className="position">
@@ -78,7 +75,7 @@ export default function Gallery() {
         <div className="bg-gray-300 rounded-2xl rounded-bl container mx-auto px-2">
           <div className="my-10 mx-8 gap-8 grid grid-cols-2 max-sm:gap-4 md:grid-cols-3">
             {paginatedItems.map((item, index) => (
-              <div className="image-container rounded-[2rem]">
+              <div className="image-container rounded-[2rem]" key={index}>
               <Image
                 src={item.src}
                 alt={item.alt}
