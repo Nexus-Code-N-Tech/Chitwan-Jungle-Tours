@@ -113,9 +113,13 @@ export default function Homepage() {
   }, []);
 
   useEffect(() => {
-    if (!dim.h) return;
+    if (!dim.h || document.cookie.includes("confetti")) return;
     console.log(dim);
     setConfetti(true);
+    const d = new Date();
+    d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+    document.cookie = "confetti=true;" + "expires=" + d.toUTCString();
+    +";path=/";
     const timer = setTimeout(() => {
       setConfetti(false);
     }, 5000);
