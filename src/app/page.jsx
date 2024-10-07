@@ -3,9 +3,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import Link from "next/link";
 
-import { Menu, WineOff, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -26,6 +25,9 @@ import review1 from "assets/review1.jpg";
 import guide from "assets/guide.png";
 import tourist from "assets/tourist.png";
 
+import { Star } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 import {
   Carousel,
   CarouselContent,
@@ -34,21 +36,63 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { StarIcon } from "lucide-react";
-
+const reviews = [
+  {
+    id: 1,
+    name: "Adolf Hitler",
+    avatar: "",
+    rating: 5,
+    text: "Dammi xa hai dai lah best of best.",
+  },
+  {
+    id: 2,
+    name: "Adolf Hitler",
+    avatar: "",
+    rating: 4,
+    text: "kada haixa dai kada.",
+  },
+  {
+    id: 3,
+    name: "Adolf Hitler",
+    avatar: "",
+    rating: 3,
+    text: "aile samma yesto thau katai ghumethina",
+  },
+  {
+    id: 4,
+    name: "Adolf Hitler",
+    avatar: "",
+    rating: 1,
+    text: "Nefol derai raamro cha.",
+  },
+  {
+    id: 5,
+    name: "Adolf Hitler",
+    avatar: "",
+    rating: 2,
+    text: "Nefol derai raamro cha.",
+  },
+  {
+    id: 6,
+    name: "Adolf Hitler",
+    avatar: "",
+    rating: 0,
+    text: "Nefol derai raamro cha.",
+  },
+];
 export default function Homepage() {
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+
   const [isExpanded, setIsExpanded] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
-  const [confetti, setConfetti] = useState(false); // Set initial state to false
+  const [confetti, setConfetti] = useState(false);
   const stickyButtonRef = useRef(null);
   const footerRef = useRef(null);
   const [dim, setDim] = useState({});
-  // Handle expansion of the sticky button
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
 
-  // Check if the sticky button hits the footer
   useEffect(() => {
     const handleScroll = () => {
       if (stickyButtonRef.current && footerRef.current) {
@@ -71,19 +115,45 @@ export default function Homepage() {
   useEffect(() => {
     if (!dim.h) return;
     console.log(dim);
-    setConfetti(true); // Start confetti
+    setConfetti(true);
     const timer = setTimeout(() => {
-      setConfetti(false); // Stop confetti after 5 seconds
+      setConfetti(false);
     }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup on unmount
+    return () => clearTimeout(timer);
   }, [dim]);
+
+  const STFU = ({ review }) => (
+    <Card key={review.id}>
+      <CardContent className="flex flex-col items-center p-6">
+        <Avatar className="w-16 h-16 mb-4">
+          <AvatarImage src={review.avatar} alt={review.name} />
+          <AvatarFallback>
+            {review.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
+          </AvatarFallback>
+        </Avatar>
+        <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
+        <div className="flex mb-2">
+          {[...Array(review.rating)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+          ))}
+          {[...Array(5 - review.rating)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 text-gray-400" />
+          ))}
+        </div>
+        <p className="text-center text-muted-foreground">{review.text}</p>
+      </CardContent>
+    </Card>
+  );
 
   return (
     <>
-      <div className="w-screen space-y-14">
-        <div className="relative lg:h-full w-screen">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
+      <div className="w-[98,7] space-y-14">
+        <div className="relative lg:h-full w-full bg-black">
+          <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
             <span className="font-MuseoModerno text-2xl px-2 lg:text-6xl">
               YOUR JOURNEY, OUR EXPERTISE!
             </span>
@@ -115,7 +185,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="container mx-auto p-4 grid grid-cols-3 gap-2">
+        <div className="mx-auto px-10 lg:justify-evenly lg:flex grid grid-cols-3 gap-2">
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Explore World
@@ -161,8 +231,8 @@ export default function Homepage() {
                   src={guide}
                   className="relative left-4 inline-block"
                   alt="Guide"
-                  style={{ width: "450px", height: "500px" }} // Smaller size for small screens
-                  sizes="(max-width: 1024px) 200px, 400px" // Responsive sizes
+                  style={{ width: "450px", height: "500px" }}
+                  sizes="(max-width: 1024px) 200px, 400px"
                 />
 
                 {/* Text content */}
@@ -173,7 +243,7 @@ export default function Homepage() {
                     maxWidth: "700px",
                     height: "400",
                     minHeight: "350px",
-                  }} // Auto height for flexibility
+                  }}
                 >
                   <p className="font-Poppins text-white text-lg md:text-xl text-center absolute inset-2 md:inset-8 flex justify-center items-center p-0">
                     Lorem Ipsum is simply dummy text of the printing and
@@ -216,8 +286,8 @@ export default function Homepage() {
                   src={tourist}
                   className="relative left-4 inline-block rounded-3xl"
                   alt="Tourist"
-                  style={{ width: "450px", height: "500px" }} // Smaller size for small screens
-                  sizes="(max-width: 1024px) 200px, 400px" // Responsive sizes
+                  style={{ width: "450px", height: "500px" }}
+                  sizes="(max-width: 1024px) 200px, 400px"
                 />
               </div>
             </div>
@@ -288,12 +358,87 @@ export default function Homepage() {
           </div>
         </div>
       </div> */}
+        <div className="bg-gray-200 rounded pb-8">
+          <h2 className="font-MuseoModerno text-black underline text-2xl font-bold text-center mb-5 pt-5">
+            Reviews from our clients
+          </h2>
+          <div className="flex justify-center">
+            {/* Carousel for large screens */}
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-3/4 hidden lg:block"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+            >
+              <CarouselContent>
+                {reviews
+                  .reduce((result, review, index) => {
+                    if (index % 3 === 0) result.push([]);
+                    result[result.length - 1].push(review);
+                    return result;
+                  }, [])
+                  .map((group, i) => (
+                    <CarouselItem key={i}>
+                      <div className="grid grid-cols-3 gap-5 px-1">
+                        {group.map((review) => (
+                          <STFU review={review} />
+                        ))}
+                      </div>
+                    </CarouselItem>
+                  ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
 
-        <h2 className="font-MuseoModerno text-black text-2xl font-bold text-center mb-4 pt-10">
-          Reviews from our clients
-        </h2>
-        <div className="flex justify-center py-10">
-          <CarouselPlugin />
+            {/* Carousel for small screens */}
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-3/4 block md:hidden"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+            >
+              <CarouselContent>
+                {reviews.map((review, i) => (
+                  <CarouselItem key={i}>
+                    <div className="grid grid-cols-1 gap-5 px-1">
+                      <STFU review={review} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+
+            {/* Carousel for medium screens */}
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-3/4 hidden md:block lg:hidden"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+            >
+              <CarouselContent>
+                {reviews
+                  .reduce((result, review, index) => {
+                    if (index % 2 === 0) result.push([]);
+                    result[result.length - 1].push(review);
+                    return result;
+                  }, [])
+                  .map((group, i) => (
+                    <CarouselItem key={i}>
+                      <div className="grid grid-cols-2 gap-5 px-1">
+                        {group.map((review) => (
+                          <STFU review={review} />
+                        ))}
+                      </div>
+                    </CarouselItem>
+                  ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
         </div>
 
         {/* Confetti */}
@@ -394,65 +539,5 @@ export default function Homepage() {
         </div>
       </div>
     </>
-  );
-}
-
-export function CarouselPlugin() {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
-  return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="w-1/2"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="aspect-square p-6">
-                  <div className="flex justify-center">
-                    <div>
-                      <Image
-                        src={review1}
-                        className="rounded-full justify-center flex w-[95px]"
-                      ></Image>
-                    </div>
-                  </div>
-                  <div className="p-8 text-center">
-                    <h3 className="text-2xl font-bold ">
-                      Chitwan Jungle Tours Visit
-                    </h3>
-                    <div className="flex justify-center gap-3 pt-5">
-                      <StarIcon className="fill-black" />
-                      <StarIcon className="fill-black" />
-                      <StarIcon className="fill-black" />
-                      <StarIcon className="fill-black" />
-                      <StarIcon className="fill-black" />
-                    </div>
-                    <div className="pt-8">
-                      <p>
-                        Experiencing Chitwan National Visit, with Chitwan Jungle
-                        Safari team gave me a great platform to enjoy my dream
-                        holidays in Nepalese exotic Bio-Diversity. It was an
-                        awe-inspiring experience to Chitwan National Park as I
-                        admitted Jeep Safari Tours, Tharu Presentation, Elephant
-                        Safari, Canoe ride, and more. The facilities of the
-                        Chitwan Jungle Safari team were just fantastic; their
-                        greetings and harmony have pleased me to choose the
-                        Chitwan Jungle Safari team on my next trip to Nepal.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
   );
 }
