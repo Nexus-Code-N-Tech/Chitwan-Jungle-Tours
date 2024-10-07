@@ -1,5 +1,4 @@
 "use client";
-//WHOEVER MADE THIS, THE UI IS REALLY AWESOME, 👍
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";

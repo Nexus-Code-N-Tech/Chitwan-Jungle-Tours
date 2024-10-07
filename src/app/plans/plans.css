@@ -3,6 +3,20 @@
   border-top-right-radius: 100px;
 }
 
+.rounded-br-full {
+  padding: 20px 16px; /* Adjust padding as needed */
+  margin: 0 auto; /* Center the content */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  border-bottom-right-radius: 270px;
+}
+
+
+.position {
+    padding: 20px 16px; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the content */
+    max-width: 1200px; /* Optional: Set a maximum width */
+  }
+
 @media (min-width: 768px) {
   .round img {
     border-bottom-left-radius: 180px;

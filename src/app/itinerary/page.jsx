@@ -1,36 +1,35 @@
 import Image from "next/image";
 import rhinoceros from "assets/rhinoceros.png";
 import "./itinerary.css";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaFacebook } from "react-icons/fa";
 
 export default function Itinerary() {
   return (
     <>
       {/* Section Itinerary Hero */}
-      <div className="position rounded-2xl py-36">
-      <section className="Section-ItineraryHero relative flex">
-        <Image
-          className="w-full bg-cover bg-center rounded-tr-[16rem] rounded-bl-[16rem]"
-          src={rhinoceros}
-          alt="Chitwan Jingle Tours rhinoceros image"
-        />
-        <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:-bottom-2 max-lg:-bottom-1 max-xl:bottom-0 max-2xl:bottom-1">
-          <p className="font-MuseoModerno text-white text-[5rem] font-bold tracking-[2px] max-md:text-[2rem] max-lg:text-[3rem] max-xl:text-[4rem] max-2xl:text-[5rem]">
-            itinerary
-          </p>
-        </div>
-      </section>
+      <div className="">
+        <section className="relative flex round">
+          <Image
+            className="position w-full bg-cover bg-center"
+            src={rhinoceros}
+            alt="Hotel"
+          />
+          <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:bottom-2 max-lg:bottom-1 max-xl:bottom-0 max-2xl:bottom-1 text-center">
+            <p className="font-MuseoModerno text-white text-[2rem] font-bold tracking-[2px] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[5rem]">
+              Itenerary
+            </p>
+          </div>
+        </section>
       </div>
 
       {/* Section Overview */}
       <section className="container mx-auto max-md:px-4 py-5">
-
-      <hr className="bg-[#990033] h-1 " />
-
+        <hr className="bg-[#990033] h-1 " />
 
         <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl max-xl:mb-5">
           Overview
         </h2>
-        <div className="position rounded-2xl rounded-br-full bg-gray-200 py-36">
+        <div className="rounded-2xl rounded-br-full bg-gray-200 py-36">
           <p className="text-center text-xl leading-7 font-light max-md:text-base max-md:leading-7 px-4 py-2">
             Nepal's plains are just 100 m above sea level; this tour takes you
             down to the tropical, flat lowlands for a real contrast to the hills
@@ -73,55 +72,61 @@ export default function Itinerary() {
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 3</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Fly Kathmandu to Chitwan (Bharatpur)
+                      Drive to Pokhara
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 4</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Jeep and foot safari
+                      Australian Camp
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 5</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Boat safari down the river to the Tiger Tops Tharu Lodge
+                      Drive to Chitwan
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 6</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      A day with the elephants
+                      Boat safari down the river
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 7</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Last morning in Chitwan || Fly back to Kathmandu
+                      Jungle Walk
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 8</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                      Jeep Safari
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 8</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                      Elephant Safari
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 8</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                      Drive back to Kathmandu
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 8</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                      Leisure Day
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 border border-gray-400">Day 8</td>
+                    <td className="px-4 py-2 border border-gray-400">
+                      Fly back Home
                     </td>
                   </tr>
                 </tbody>
@@ -130,7 +135,7 @@ export default function Itinerary() {
           </div>
 
           <div className="container mx-auto max-md:px-4">
-          <h3 className="text-center text-4xl mt-10 font-bold mb-5 max-md:text-2xl max-xl:text-4xl max-xl:mb-5 bg-green-300">
+            <h3 className="text-center text-4xl mt-10 font-bold mb-5 max-md:text-2xl max-xl:text-4xl max-xl:mb-5 bg-green-300">
               Detailed Itinerary
             </h3>
             <h4 className="font-semibold">Day 1:</h4>
@@ -246,18 +251,57 @@ export default function Itinerary() {
               driver.
             </p>
 
-            <h4 className="mt-10 mb-1 font-semibold text-xl">Contact Information:</h4>
-            <p className="mb-4">
-              <strong>Name:</strong> Unique Adhikari
-              <br />
-              <strong>Contact:</strong> 9866028826
-              <br />
-              <strong>WhatsApp:</strong> <a href="https://wa.me/9866028826">9866028826</a>
-              <br />
-              <strong>Email:</strong> <a href="mailto:contactuniqueadhikari@gmail.com">contactuniqueadhikari@gmail.com</a>
-              <br />
-              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/uniqueadhikari.007">युनिक अधिकारी</a>
-            </p>
+            {/* Contact Information Section */}
+            <div className="container mx-auto max-md:px-4">
+              <h4 className="mt-10 mb-1 font-semibold text-xl text-left underline">
+                Contact Information:
+              </h4>
+              <table className="table-auto text-left mb-4 w-full">
+                <tbody>
+                  <tr>
+                    <td className="font-semibold align-top">
+                      <FaPhoneAlt className="hidden sm:inline-block align-middle mr-2" />
+                      Phone:
+                    </td>
+                    <td>
+                      <a href="https://wa.me/9866028826">9866028826</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="font-semibold align-top">
+                      <FaWhatsapp className="hidden sm:inline-block align-middle mr-2" />
+                      WhatsApp:
+                    </td>
+                    <td>
+                      <a href="https://wa.me/9866028826">9866028826</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="font-semibold align-top">
+                      <FaEnvelope className="hidden sm:inline-block align-middle mr-2" />
+                      Email:
+                    </td>
+                    <td>
+                      <a href="mailto:contactuniqueadhikari@gmail.com">
+                        contactuniqueadhikari@gmail.com
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="font-semibold align-top">
+                      <FaFacebook className="hidden sm:inline-block align-middle mr-2" />
+                      <span className="hidden sm:inline">Facebook Page:</span>
+                      <span className="sm:hidden">Facebook:</span>
+                    </td>
+                    <td>
+                      <a href="https://www.facebook.com/uniqueadhikari.007">
+                        युनिक अधिकारी
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>

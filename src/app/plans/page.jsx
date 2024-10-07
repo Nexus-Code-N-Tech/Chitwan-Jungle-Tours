@@ -28,20 +28,23 @@ export default function Plans() {
 
   return (
     <div className="">
-      <section className="relative flex round bg-gray-200 pb-8">
-        <Image className="w-full bg-cover bg-center" src={hotel} alt="Hotel" />
+      <section className="relative flex round">
+        <Image className="position w-full bg-cover bg-center" src={hotel} alt="Hotel" />
         <div className="absolute bottom-4 left-1/2 -translate-x-2/4 -translate-y-2/4 max-md:bottom-2 max-lg:bottom-1 max-xl:bottom-0 max-2xl:bottom-1 text-center">
           <p className="font-MuseoModerno text-white text-[2rem] font-bold tracking-[2px] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] 2xl:text-[5rem]">
             Plans & Package
           </p>
         </div>
       </section>
-      <div className="bg-red-900 h-[2px]"></div>
-      <section className="py-8 bg-gray-200">
-        <div className="container mx-auto p-12">
+
+
+        <div className="container position rounded-2xl bg-gray-200 py-36 mx-auto p-12">
+          <hr className="bg-[#990033] h-1 " />
           <h2 className="font-MuseoModerno uppercase font-bold text-3xl tracking-widest">
             Archives: Trips
           </h2>
+
+
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 mt-5">
             {paginatedItems.map((item) => (
@@ -70,7 +73,6 @@ export default function Plans() {
             ))}
           </div>
         </div>
-      </section>
       <PaginationDemo
         currentPage={currentPage}
         totalPages={totalPages}

@@ -5,12 +5,90 @@
   border-bottom-right-radius: 270px;
 }
 
+.round img {
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
 .overview {
     font-weight: 700;
 }
 
 .position {
-padding: 20px 16px; /* Adjust padding as needed */
+  padding: 20px 16px; /* Adjust padding as needed */
   margin: 0 auto; /* Center the content */
   max-width: 1200px; /* Optional: Set a maximum width */
+}
+
+@media (min-width: 768px) {
+  .round img {
+    border-bottom-left-radius: 180px;
+    border-top-right-radius: 180px;
+  }
+}
+@media (min-width: 640px) {
+  .round img {
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .round img {
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+}
+
+
+/* Ensure the image is responsive */
+.position img {
+  width: 100%;
+  height: auto;
+}
+
+/* Image rounded corners */
+.rounded {
+  border-top-left-radius: 16rem; /* Initial border radius */
+  border-bottom-right-radius: 16rem; /* Initial border radius */
+}
+
+/* Text adjustments */
+.position p {
+  font-size: 5rem; /* Default font size for larger screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) { /* For small devices */
+  .position {
+    padding: 10px 8px; /* Reduced padding for small devices */
+  }
+
+  .rounded {
+    border-top-left-radius: 10rem; /* Smaller rounded corners */
+    border-bottom-right-radius: 10rem; /* Smaller rounded corners */
+  }
+
+  .position p {
+    font-size: 2rem; /* Smaller font size for small devices */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) { /* For medium devices */
+  .position p {
+    font-size: 3rem; /* Medium font size */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* For large devices */
+  .position p {
+    font-size: 4rem; /* Large font size */
+  }
+}
+
+/* Additional styling to center the text and provide padding */
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

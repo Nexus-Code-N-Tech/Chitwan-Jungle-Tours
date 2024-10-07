@@ -161,7 +161,7 @@ export default function page() {
             <div className="mb-4">
               <button
                 type="submit"
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md mr-2"
+                className="bg-blue-600 hover:bg-green-700 text-white px-4 py-2 rounded-md mr-2"
               >
                 Submit
               </button>
@@ -175,7 +175,7 @@ export default function page() {
           </form>
 
           {submitted && (
-            <div className="bg-green-300 text-green-800 mt-2 p-4 mb-4 rounded-md">
+            <div className="bg-green-300 text-blue-500 mt-2 p-4 mb-4 rounded-md">
               Your Message Has Been Submitted !!
             </div>
           )}

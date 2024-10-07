@@ -49,7 +49,9 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="position relative flex">
+      <div className="position rounded-2xl py-36">
+      <section className="Section-ItineraryHero relative flex">
+
         <Image
           src="/assets/j61.png"
           alt="Gallery Banner"
@@ -62,6 +64,7 @@ export default function Gallery() {
             Gallery
           </p>
         </div>
+        </section>
       </div>
 
       <div className="position">
@@ -72,17 +75,18 @@ export default function Gallery() {
         </h2>
       </div>
       <div className="container mx-auto max-md:px-4">
-        <div className="bg-gray-300 rounded-2xl rounded-bl-full container mx-auto px-2">
+        <div className="bg-gray-300 rounded-2xl rounded-bl container mx-auto px-2">
           <div className="my-10 mx-8 gap-8 grid grid-cols-2 max-sm:gap-4 md:grid-cols-3">
             {paginatedItems.map((item, index) => (
-              <div key={index} className="flex flex-wrap items-center">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={200}
-                  height={100}
-                  className="w-full sm:size-[4rem] md:size-[15rem] lg:size-[17rem] xl:size-[19rem] 2xl:size-[21rem] object-cover rounded-[2rem] cursor-pointer transition ease-in hover:opacity-80"
-                />
+              <div className="image-container rounded-[2rem]">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={200}
+                height={100}
+                className="w-full sm:size-[4rem] md:size-[15rem] lg:size-[17rem] xl:size-[19rem] 2xl:size-[21rem] object-cover  cursor-pointer transition ease-in"
+              />
+
                 <span className="text-black font-bold w-full text-md sm:text-base md:text-lg lg:text-xl my-[1rem] font-MuseoModerno text-center cursor-pointer">
                   {item.text[0]} <br className="md:inline lg:hidden" />{" "}
                   {item.text[1]}
