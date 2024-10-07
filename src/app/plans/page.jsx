@@ -53,7 +53,7 @@ export default function Plans() {
                 className="bg-[#f4f5f8] shadow-xl rounded-3xl card"
               >
                 <div className="relative card1">
-                  <Image src={item.src} layout="responsive" alt={item.title} />
+                  <Image src={item.src} alt={item.title} />
                 </div>
 
                 <div className="p-5">
