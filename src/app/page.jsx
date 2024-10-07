@@ -155,8 +155,8 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="w-[98,7] space-y-14">
-        <div className="relative lg:h-full w-full bg-black">
+      <div className="space-y-14 ">
+        <div className="relative lg:h-full w-full">
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white space-y-2">
             <span className="font-MuseoModerno text-2xl px-2 lg:text-6xl">
               YOUR JOURNEY, OUR EXPERTISE!
@@ -165,7 +165,7 @@ export default function Homepage() {
               Adventure Deeper
             </span>
           </div>
-          <Image className="object-cover h-full w-full" src={home} alt="Home" />
+          <Image className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2 " src={home} alt="Home" />
         </div>
 
         <div className="container flex flex-col sm:flex-row sm:gap-2">
@@ -181,8 +181,8 @@ export default function Homepage() {
               With 20+ years in tour guiding, adventure, cross-cultural
               exploration, we design the perfect journey for you.
             </p>
-            <button className="inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
-              <span className="px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <button className="inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 focus:ring-4 focus:outline-none focus:ring-lime-200">
+              <span className="px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
                 Schedule a call
               </span>
             </button>
@@ -197,7 +197,7 @@ export default function Homepage() {
             <Image
               src={img1}
               alt="Image 1"
-              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md"
+              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
           </div>
 
@@ -208,7 +208,7 @@ export default function Homepage() {
             <Image
               src={img2}
               alt="Image 1"
-              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md"
+              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
           </div>
 
@@ -219,7 +219,7 @@ export default function Homepage() {
             <Image
               src={img3}
               alt="Image 1"
-              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md"
+              className="h-full object-cover rounded-tr-[4rem] rounded-bl-[4rem] rounded-md bg-[#990033] py-2"
             />
           </div>
         </div>
@@ -362,7 +362,7 @@ export default function Homepage() {
           </div>
         </div>
       </div> */}
-        <div className="bg-gray-200 rounded pb-8">
+        <div className="bg-green-200 rounded pb-8 mx-8">
           <h2 className="font-MuseoModerno text-black underline text-2xl font-bold text-center mb-5 pt-5">
             Reviews from our clients
           </h2>
