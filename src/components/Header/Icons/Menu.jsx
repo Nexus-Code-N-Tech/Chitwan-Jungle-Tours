@@ -6,7 +6,7 @@ export default function () {
       height="50"
       fill="none"
       viewBox="0 0 50 50"
-      className="h-full w-7"
+      className="invisible h-full w-7"
     >
       <path
         fill="#000"
