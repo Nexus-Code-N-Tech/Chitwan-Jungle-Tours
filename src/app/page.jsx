@@ -22,8 +22,10 @@ import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
 import boat2 from "assets/boat2.png";
 import review1 from "assets/review1.jpg";
-import guide from "assets/guide.png";
-import tourist from "assets/tourist.png";
+
+
+import roundedGuide from "../../public/home/guide.png";
+import roundedTourist from "../../public/home/tourist1.png";
 
 import { Star } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -189,7 +191,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mx-auto px-10 lg:justify-evenly lg:flex grid grid-cols-3 gap-2">
+        <div className="mx-auto px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Explore World
@@ -201,7 +203,7 @@ export default function Homepage() {
             />
           </div>
 
-          <div className="relative h-52 md:h-auto">
+          <div className="relative h-52 md:h-auto hidden md:block">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Explore World
             </h2>
@@ -224,144 +226,56 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="lg:block hidden">
-          {/* background, guide photo and texts */}
-          <div className="relative text-center container mx-auto py-5 ">
-            <Image src={boat2} className="w-full h-auto bg-cover" alt="Boat" />
-            <div className="absolute inset-0 flex justify-center items-center">
-              <div className="relative flex items-center mx-4 lg:mx-20">
-                {/* Guide image */}
-                <Image
-                  src={guide}
-                  className="relative left-4 inline-block"
-                  alt="Guide"
-                  style={{ width: "450px", height: "500px" }}
-                  sizes="(max-width: 1024px) 200px, 400px"
-                />
-
-                {/* Text content */}
-                <div
-                  className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
-                  style={{
-                    width: "750px",
-                    maxWidth: "700px",
-                    height: "400",
-                    minHeight: "350px",
-                  }}
-                >
-                  <p className="font-Poppins text-white text-lg md:text-xl text-center absolute inset-2 md:inset-8 flex justify-center items-center p-0">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. Lorem Ipsum.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Best experiences in chitwan */}
-
-          <div className="relative text-center container mx-auto bg-cover">
-            <Image src={boat2} className="w-full h-auto" alt="Boat" />
-            <div className="absolute inset-0 flex justify-center items-center">
-              <div className="relative flex items-center mx-20">
-                <div
-                  className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
-                  style={{ width: "700px", height: "400px" }}
-                >
-                  <p className="font-Poppins text-white text-xl text-center absolute inset-0 flex justify-center items-center p-0">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
-                  </p>
-                </div>
-                <Image
-                  src={tourist}
-                  className="relative left-4 inline-block rounded-3xl"
-                  alt="Tourist"
-                  style={{ width: "450px", height: "500px" }}
-                  sizes="(max-width: 1024px) 200px, 400px"
-                />
-              </div>
-            </div>
-          </div>
+        {/* FOR SM and MD only*/}
+      <div
+        className="lg:hidden px-5 py-4 -space-y-1 bg-no-repeat"
+        style={{ backgroundImage: `url("assets/boat2.png")` }}
+      >
+        <div className="relative rounded-t-xl break-words text-white rounded-tr-[70%] bg-gradient-to-br from-[#802D65] to-60% to-[#5C2C59]">
+          <h1 className="font-semibold text-lg px-5 py-4">My Specialization</h1>
+          <p className="text-sm px-5 pr-20 mt-3">
+            Chitwan is renowned for its exceptional experiences centered around
+            its famous national park, home to rare and endangered animals like
+            the one-horned rhino,
+          </p>
+          <Image
+            className="float-right p-2 mr- m-6"
+            src={roundedGuide}
+            width={120}
+            height={120}
+          />
+          <p className="text-sm px-5 pr-16 pb-5">
+            Asian elephant, Bengal tiger, and gharial crocodile. Visitors can go
+            on thrilling jungle safaris, where spotting these majestic creatures
+            in their natural habitat is a highlight.
+          </p>
         </div>
 
-        <div className="lg:hidden block">
-          {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
-          <div
-            className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
-            style={{ backgroundImage: `url('assets/boat2.png')` }}
+        <div className="relative break-words py-14 text-white rounded-bl-[70%] bg-gradient-to-bl to-[#802D65] from-30% from-[#5C2C59]">
+          <h1 className="font-semibold text-lg px-5 py-4 ">
+            Best Experience in Chitwan
+          </h1>
+          <p className="text-sm px-5 pl-20 mt-3">
+            Chitwan is renowned for its exceptional experiences centered around
+            its famous national park, home to rare and endangered animals like
+            the one-horned rhino, Asian elephant, Bengal tiger, and gharial
+            crocodile.
+          </p>
+          <Image
+            className="float-left p-2 ml-24 mt-2"
+            src={roundedTourist}
+            width={120}
+            height={120}
+          />
+          <p
+            className="text-sm px-5
+           text-right"
           >
-            <div className="grid grid-cols-[1fr_2fr]">
-              <div className="rounded-3xl py-3">
-                <Image src={guide} alt="Guide" />
-              </div>
-              <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
-                <p className="">About Guide</p>
-                <p className="">
-                  Our guide offers a clear, step-by-step approach that makes
-                  even the most complex topics easy to understand. Whether
-                  you're a beginner or an experienced professional, the guide is
-                  designed to provide practical solutions and actionable
-                  insights.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
-            style={{ backgroundImage: `url('assets/boat-2958283_1280 1.png')` }}
-          >
-            <div className="grid grid-cols-[2fr_1fr]">
-              <div className="rounded-md text-white lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
-                <p className="">About Guide</p>
-                <p className="">
-                  Our guide offers a clear, step-by-step approach that makes
-                  even the most complex topics easy to understand. Whether
-                  you're a beginner or an experienced professional, the guide is
-                  designed to provide practical solutions and actionable
-                  insights.
-                </p>
-              </div>
-              <div className="rounded-3xl py-3">
-                <Image src={tourist} alt="Guide" />
-              </div>
-            </div>
-          </div>
+            Visitors can go on thrilling jungle safaris, where spotting these
+            majestic creatures in their natural.
+          </p>
         </div>
-        {/* <div>
-        <div
-          className="grid grid-cols-[12rem_1fr] h-80 w-full"
-          style={{ backgroundImage: "url(assets/boat2.png)" }}
-        >
-          <div className="h-80 inline-flex justify-end">
-            <Image src={guide} className="h-full w-fit py-8 lg:py-10 rounded-2xl" />
-          </div>
-          <div className="py-2">
-            <div className="h-full px-2 w-full self-center text-xs lg:text-lg font-Poppins rounded-lg bg-[#5c2c59] flex text-center flex-col items-center justify-center text-white">
-              <p className="">About Guide</p>
-              <p>
-                Our guide offers a clear, step-by-step approach that makes even
-                the most complex topics easy to understand. Whether you're a
-                beginner or an experienced professional, the guide is designed
-                to provide practical solutions and actionable insights.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      </div>
         <div className="bg-green-200 rounded pb-8 mx-8">
           <h2 className="font-MuseoModerno text-black underline text-2xl font-bold text-center mb-5 pt-5">
             Reviews from our clients
