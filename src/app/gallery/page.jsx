@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import "./plans/plans.css";
+import "./gallery.css";
 
 import {
   Pagination,

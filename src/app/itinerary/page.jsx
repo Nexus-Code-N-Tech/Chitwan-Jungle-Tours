@@ -1,6 +1,6 @@
 import Image from "next/image";
 import rhinoceros from "assets/rhinoceros.png";
-import "./plans/plans.css";
+import "./itinerary.css";
 
 export default function Itinerary() {
   return (
@@ -24,7 +24,7 @@ export default function Itinerary() {
       {/* Section Overview */}
       <section className="container mx-auto max-md:px-4 py-5">
 
-      <hr className="bg-[#990033] h-1 " />
+      <hr className="bg-[#990033] h-1" />
 
 
         <h2 className="overview text-center text-4xl max-md:text-2xl max-xl:text-4xl max-xl:mb-5">

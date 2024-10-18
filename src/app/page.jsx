@@ -214,6 +214,8 @@ export default function Homepage() {
             />
           </div>
 
+
+
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Explore World
@@ -450,8 +452,7 @@ export default function Homepage() {
             onClick={toggleExpand}
             className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
               isExpanded ? "scale-105" : "scale-100"
-            }`}
-          >
+            }`}>
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
