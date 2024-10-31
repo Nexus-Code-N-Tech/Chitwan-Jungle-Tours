@@ -58,43 +58,70 @@ export default function () {
                   Contact Us
                 </button>
               </Link>
+
               <div>
-                <Phone fill={"#fff"} /> +977 9876543210
+                <Phone fill={"#fff"} />
+                <a href="tel:+9779876543210">+977 9876543210</a>
               </div>
               <div className="inline-flex gap-2 items-center">
-                <Facebook /> <a>facbook.com</a>
+                <Facebook />{" "}
+                <a
+                  href="https://www.facebook.com/fule.chaudhary"
+                  target="_blank"
+                >
+                  facbook.com
+                </a>
               </div>
             </div>
           </div>
-          <div className="-mt-6 text-white flex flex-col items-center justify-center ">
+          <div className="-mt-6 text-white flex flex-col items-center justify-center text-2xl">
             Associated with
             <div className="inline-flex mt-4 gap-4">
               <div className="bg-gradient-to-t relative text-center from-[#990033] to-[#D9D9D9] w-20 h-20 rounded-full">
-                <Image
-                  src={"/global/ntb.png"}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-2"
-                  alt="Chitwan National Park Icon"
-                  width={60}
-                  height={60}
-                />
+                <a
+                  href="https://ntb.gov.np/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={"/global/ntb.png"}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-2"
+                    alt="Nepal tourism Board"
+                    width={60}
+                    height={60}
+                  />
+                </a>
+              </div>
+
+              <div className="bg-gradient-to-t relative from-[#990033] to-[#D9D9D9] w-20 h-20 rounded-full">
+                <a
+                  href="https://www.nepal.gov.np/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={"/global/Emblem_of_Nepal.svg.png"}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    alt="Nepal Government"
+                    width={70}
+                    height={70}
+                  />
+                </a>
               </div>
               <div className="bg-gradient-to-t relative from-[#990033] to-[#D9D9D9] w-20 h-20 rounded-full">
-                <Image
-                  src={"/global/Emblem_of_Nepal.svg.png"}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  alt="Chitwan National Park Icon"
-                  width={70}
-                  height={70}
-                />
-              </div>
-              <div className="bg-gradient-to-t relative from-[#990033] to-[#D9D9D9] w-20 h-20 rounded-full">
-                <Image
-                  src={"/global/Chitwan-National-Park-logo-min.webp"}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  alt="Chitwan National Park Icon"
-                  width={80}
-                  height={80}
-                />
+                <a
+                  href="https://chitwannationalpark.gov.np/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={"/global/Chitwan-National-Park-logo-min.webp"}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    alt="Chitwan National Park"
+                    width={80}
+                    height={80}
+                  />
+                </a>
               </div>
             </div>
           </div>

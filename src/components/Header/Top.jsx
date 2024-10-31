@@ -23,8 +23,10 @@ export default function () {
             </a>
 
             <div className="space-x-2">
-              <Phone fill="#fff" />
-              <span>056-533789</span>
+              <Phone fill={"#fff"} />
+              <span>
+                <a href="tel:+9779876543210">+977 9876543210</a>
+              </span>
             </div>
 
             <div className="space-x-2">
@@ -34,10 +36,37 @@ export default function () {
           </div>
 
           <div className="hidden sm:inline-flex sm:col-span-2 lg:col-span-1 lg:justify-center lg:gap-8 justify-evenly items-center">
-            <Facebook />
-            <Twitter />
-            <Instagram />
-            <Whatsapp />
+            <a
+              href="https://www.facebook.com/fule.chaudhary"
+              target="_blank"
+              className="flex items-center"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="https://twitter.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <Twitter />
+            </a>
+            <a
+              href="https://www.instagram.com/unik.adhikarii/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://wa.me/9866028826"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <Whatsapp />
+            </a>
           </div>
         </div>
       </div>
@@ -64,7 +93,11 @@ export default function () {
         </div>
         <Link href="/itinerary">Itinerary</Link>
         <div className="md:block hidden">
-          <Phone fill={"#7C992E"} /> <span>800-255-8735</span>
+          <Phone fill={"#fff"} />
+          <Phone fill={"#7C992E"} />{" "}
+          <span>
+            <a href="tel:+9779876543210">+977 9876543210</a>
+          </span>
         </div>
         <Link
           href="/contact"

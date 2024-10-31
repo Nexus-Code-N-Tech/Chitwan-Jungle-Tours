@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
 
 import { Menu, X } from "lucide-react";
@@ -13,6 +14,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Confetti from "react-confetti";
+import guide from "assets/guide.png";
+import guide1 from "assets/guide1.png";
+import tourist from "assets/tourist.png";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -22,7 +26,6 @@ import img2 from "assets/img2.png";
 import img3 from "assets/img3.png";
 import boat2 from "assets/boat2.png";
 import review1 from "assets/review1.jpg";
-
 
 import roundedGuide from "../../public/home/guide.png";
 import roundedTourist from "../../public/home/tourist1.png";
@@ -41,47 +44,48 @@ import {
 const reviews = [
   {
     id: 1,
-    name: "Adolf Hitler",
+    name: "Unique Adhikari",
     avatar: "",
     rating: 5,
     text: "Dammi xa hai dai lah best of best.",
   },
   {
     id: 2,
-    name: "Adolf Hitler",
+    name: "Ankit Chaudhary",
     avatar: "",
     rating: 4,
     text: "kada haixa dai kada.",
   },
   {
     id: 3,
-    name: "Adolf Hitler",
+    name: "Pramod Sharma",
     avatar: "",
     rating: 3,
     text: "aile samma yesto thau katai ghumethina",
   },
   {
     id: 4,
-    name: "Adolf Hitler",
+    name: "Anush Adhikari",
     avatar: "",
     rating: 1,
     text: "Nefol derai raamro cha.",
   },
   {
     id: 5,
-    name: "Adolf Hitler",
+    name: "Saugat Chaudhary",
     avatar: "",
     rating: 2,
     text: "Nefol derai raamro cha.",
   },
   {
     id: 6,
-    name: "Adolf Hitler",
+    name: "Sudip Panta",
     avatar: "",
     rating: 0,
     text: "Nefol derai raamro cha.",
   },
 ];
+
 export default function Homepage() {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
@@ -167,7 +171,11 @@ export default function Homepage() {
               Adventure Deeper
             </span>
           </div>
-          <Image className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2 " src={home} alt="Home" />
+          <Image
+            className="lg:h-[90vh] w-full rounded-tl-[100px] bg-yellow-200 py-2 "
+            src={home}
+            alt="Home"
+          />
         </div>
 
         <div className="container flex flex-col sm:flex-row sm:gap-2">
@@ -183,18 +191,21 @@ export default function Homepage() {
               With 20+ years in tour guiding, adventure, cross-cultural
               exploration, we design the perfect journey for you.
             </p>
-            <button className="inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 focus:ring-4 focus:outline-none focus:ring-lime-200">
-              <span className="px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-                Schedule a call
-              </span>
-            </button>
+            <br />
+            <Link href="/contact">
+              <button className="inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 focus:ring-4 focus:outline-none focus:ring-lime-200">
+                <span className="px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                  Schedule a call
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
 
         <div className="mx-auto px-10 lg:justify-evenly lg:flex grid grid-cols-2 gap-2">
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
-              Explore World
+              Exploring Places
             </h2>
             <Image
               src={img1}
@@ -205,7 +216,7 @@ export default function Homepage() {
 
           <div className="relative h-52 md:h-auto hidden md:block">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
-              Explore World
+              Tharu Cultural Dance
             </h2>
             <Image
               src={img2}
@@ -216,7 +227,7 @@ export default function Homepage() {
 
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
-              Explore World
+              Canoeing at Rapti
             </h2>
             <Image
               src={img3}
@@ -227,57 +238,189 @@ export default function Homepage() {
         </div>
 
         {/* FOR SM and MD only*/}
-      <div
-        className="lg:hidden px-5 py-4 -space-y-1 bg-no-repeat"
-        style={{ backgroundImage: `url("assets/boat2.png")` }}
-      >
-        <div className="relative rounded-t-xl break-words text-white rounded-tr-[70%] bg-gradient-to-br from-[#802D65] to-60% to-[#5C2C59]">
-          <h1 className="font-semibold text-lg px-5 py-4">My Specialization</h1>
-          <p className="text-sm px-5 pr-20 mt-3">
-            Chitwan is renowned for its exceptional experiences centered around
-            its famous national park, home to rare and endangered animals like
-            the one-horned rhino,
-          </p>
-          <Image
-            className="float-right p-2 mr- m-6"
-            src={roundedGuide}
-            width={120}
-            height={120}
-          />
-          <p className="text-sm px-5 pr-16 pb-5">
-            Asian elephant, Bengal tiger, and gharial crocodile. Visitors can go
-            on thrilling jungle safaris, where spotting these majestic creatures
-            in their natural habitat is a highlight.
-          </p>
+        <div
+          className="lg:hidden px-5 py-4 -space-y-1 bg-no-repeat"
+          style={{ backgroundImage: `url("assets/boat2.png")` }}
+        >
+          <div className="relative rounded-t-xl break-words text-white rounded-tr-[70%] bg-gradient-to-br from-[#802D65] to-60% to-[#5C2C59]">
+            <h1 className="font-semibold text-lg px-5 py-4">
+              My Specialization
+            </h1>
+            <p className="text-sm px-5 pr-20 mt-3">
+              Chitwan is renowned for its exceptional experiences centered
+              around its famous national park, home to rare and endangered
+              animals like the one-horned rhino,
+            </p>
+            <Image
+              className="float-right p-2 mr- m-6"
+              src={roundedGuide}
+              width={120}
+              height={120}
+            />
+            <p className="text-sm px-5 pr-16 pb-5">
+              Asian elephant, Bengal tiger, and gharial crocodile. Visitors can
+              go on thrilling jungle safaris, where spotting these majestic
+              creatures in their natural habitat is a highlight.
+            </p>
+          </div>
+
+          <div className="relative break-words py-14 text-white rounded-bl-[70%] bg-gradient-to-bl to-[#802D65] from-30% from-[#5C2C59]">
+            <h1 className="font-semibold text-lg px-5 py-4 ">
+              Best Experience in Chitwan
+            </h1>
+            <p className="text-sm px-5 pl-20 mt-3">
+              Chitwan is renowned for its exceptional experiences centered
+              around its famous national park, home to rare and endangered
+              animals like the one-horned rhino, Asian elephant, Bengal tiger,
+              and gharial crocodile.
+            </p>
+            <Image
+              className="float-left p-2 ml-24 mt-2"
+              src={roundedTourist}
+              width={120}
+              height={120}
+            />
+            <p
+              className="text-sm px-5
+           text-right"
+            >
+              Visitors can go on thrilling jungle safaris, where spotting these
+              majestic creatures in their natural.
+            </p>
+          </div>
         </div>
 
-        <div className="relative break-words py-14 text-white rounded-bl-[70%] bg-gradient-to-bl to-[#802D65] from-30% from-[#5C2C59]">
-          <h1 className="font-semibold text-lg px-5 py-4 ">
-            Best Experience in Chitwan
-          </h1>
-          <p className="text-sm px-5 pl-20 mt-3">
-            Chitwan is renowned for its exceptional experiences centered around
-            its famous national park, home to rare and endangered animals like
-            the one-horned rhino, Asian elephant, Bengal tiger, and gharial
-            crocodile.
-          </p>
-          <Image
-            className="float-left p-2 ml-24 mt-2"
-            src={roundedTourist}
-            width={120}
-            height={120}
-          />
-          <p
-            className="text-sm px-5
-           text-right"
-          >
-            Visitors can go on thrilling jungle safaris, where spotting these
-            majestic creatures in their natural.
-          </p>
+        <div className="lg:block hidden">
+          {/* background, guide photo and texts */}
+          <div className="relative text-center container mx-auto py-5 ">
+            <Image src={boat2} className="w-full h-auto bg-cover" alt="Boat" />
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div className="relative flex items-center mx-4 lg:mx-20">
+                {/* Guide image */}
+                <Image
+                  src={guide1}
+                  className="relative left-4 inline-block rounded-3xl"
+                  alt="Guide"
+                  style={{ width: "450px", height: "500px" }}
+                  sizes="(max-width: 1024px) 200px, 400px"
+                />
+
+                {/* Text content */}
+                <div
+                  className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
+                  style={{
+                    width: "750px",
+                    maxWidth: "700px",
+                    height: "400",
+                    minHeight: "350px",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "repeat-y",
+                  }}
+                >
+                  <p className="font-Poppins text-white text-lg md:text-xl text-center absolute inset-2 md:inset-8 flex justify-center items-center p-0">
+                    Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy
+                    text ever since the 1500s, when an unknown printer took a
+                    galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially
+                    unchanged. Lorem Ipsum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Best experiences in chitwan */}
+
+          <div className="relative text-center container mx-auto bg-cover">
+            <Image src={boat2} className="w-full h-auto" alt="Boat" />
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div className="relative flex items-center mx-20">
+                <div
+                  className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
+                  style={{ width: "700px", height: "400px" }}
+                >
+                  <p className="font-Poppins text-white text-xl text-center absolute inset-0 flex justify-center items-center p-0">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                </div>
+                <Image
+                  src={tourist}
+                  className="relative left-4 inline-block rounded-3xl"
+                  alt="Tourist"
+                  style={{ width: "450px", height: "500px" }}
+                  sizes="(max-width: 1024px) 200px, 400px"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-        <div className="bg-green-200 rounded pb-8 mx-8">
-          <h2 className="font-MuseoModerno text-black underline text-2xl font-bold text-center mb-5 pt-5">
+
+        <div className="lg:hidden block">
+          {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
+          <div
+            className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+            style={{
+              backgroundImage: `url("assets/boat2.png")`,
+              backgroundSize: "cover",
+              backgroundRepeat: "repeat",
+            }}
+          >
+            <div className="grid grid-cols-[1fr_2fr]">
+              <div className="rounded-3xl py-3">
+                <Image src={guide} alt="Guide" />
+              </div>
+              <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+                <p className="">About Guide</p>
+                <p className="">
+                  Our guide offers a clear, step-by-step approach that makes
+                  even the most complex topics easy to understand. Whether
+                  you're a beginner or an experienced professional, the guide is
+                  designed to provide practical solutions and actionable
+                  insights.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+            style={{
+              backgroundImage: `url("assets/boat-2958283_1280 1.png")`,
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "repeat",
+              backgroundPosition: "top left",
+            }}
+          >
+            <div className="grid grid-cols-[2fr_1fr]">
+              <div className="rounded-md text-white lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+                <p className="">About Guide</p>
+                <p className="">
+                  Our guide offers a clear, step-by-step approach that makes
+                  even the most complex topics easy to understand. Whether
+                  you're a beginner or an experienced professional, the guide is
+                  designed to provide practical solutions and actionable
+                  insights.
+                </p>
+              </div>
+              <div className="rounded-3xl py-3">
+                <Image src={tourist} alt="Guide" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-[#5C2C59] rounded pb-8 mx-8">
+          <h2 className="font-MuseoModerno text-white underline text-2xl font-bold text-center mb-5 pt-5">
             Reviews from our clients
           </h2>
           <div className="flex justify-center">

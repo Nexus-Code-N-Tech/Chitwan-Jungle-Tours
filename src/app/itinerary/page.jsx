@@ -1,6 +1,6 @@
 import Image from "next/image";
 import rhinoceros from "assets/rhinoceros.png";
-import "./plans/plans.css";
+import "./itinerary.css";
 
 export default function Itinerary() {
   return (
@@ -61,67 +61,73 @@ export default function Itinerary() {
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 1</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Welcome to Kathmandu!
+                    Arrival: Airport pickup & hotel transfer.
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 2</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Explore Kathmandu
+                    Visit UNESCO World Heritage Sites.
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 3</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Fly Kathmandu to Chitwan (Bharatpur)
+                    Drive to Pokhara; explore lakeside in the evening.
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 4</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Jeep and foot safari
+                    Drive to Kande; hike to Australian Camp; overnight stay.
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 5</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Boat safari down the river to the Tiger Tops Tharu Lodge
+                    Drive to Chitwan; evening river sightseeing & dinner.
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 6</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      A day with the elephants
+                    Canoe ride (40 mins); jungle walk (15 km); overnight at Ghatgain.
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 7</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Last morning in Chitwan || Fly back to Kathmandu
+                    Full jungle walk with picnic lunch; overnight in Madi Valley (homestay).
                     </td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 border border-gray-400">Day 8</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                    Jeep safari; picnic lunch; return to Sauraha for dinner.
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 border border-gray-400">Day 8</td>
+                    <td className="px-4 py-2 border border-gray-400">Day 9</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                    Elephant safari; evening tower night with packed dinner.
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 border border-gray-400">Day 8</td>
+                    <td className="px-4 py-2 border border-gray-400">Day 10</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                    Drive back to Kathmandu.
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 border border-gray-400">Day 8</td>
+                    <td className="px-4 py-2 border border-gray-400">Day 11</td>
                     <td className="px-4 py-2 border border-gray-400">
-                      Depart Kathmandu
+                    Leisure day in Kathmandu; local lifestyle observation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 border border-gray-400">Day 12</td>
+                    <td className="px-4 py-2 border border-gray-400">
+                    Departure: Fly back home.
                     </td>
                   </tr>
                 </tbody>
@@ -254,9 +260,9 @@ export default function Itinerary() {
               <br />
               <strong>WhatsApp:</strong> <a href="https://wa.me/9866028826">9866028826</a>
               <br />
-              <strong>Email:</strong> <a href="mailto:contactuniqueadhikari@gmail.com">contactuniqueadhikari@gmail.com</a>
+              <strong>Email:</strong> <a href="mailto:chaudharyfule@gmail.com">chaudharyfule@gmail.com</a>
               <br />
-              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/uniqueadhikari.007">युनिक अधिकारी</a>
+              <strong>Facebook Page:</strong> <a href="https://www.facebook.com/uniqueadhikari.007">Fule Chaudhary</a>
             </p>
           </div>
         </div>
