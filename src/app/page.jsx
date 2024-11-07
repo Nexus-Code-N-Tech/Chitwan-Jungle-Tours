@@ -16,7 +16,7 @@ import {
 import Confetti from "react-confetti";
 import guide from "assets/guide.png";
 import guide1 from "assets/guide1.png";
-import tourist from "assets/tourist.png";
+import tourist from "assets/tourist11.png";
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -133,7 +133,8 @@ export default function Homepage() {
     return () => clearTimeout(timer);
   }, [dim]);
 
-  const STFU = ({ review }) => (
+  const STFU = ({ review 
+  }) => (
     <Card key={review.id}>
       <CardContent className="flex flex-col items-center p-6">
         <Avatar className="w-16 h-16 mb-4">
@@ -214,7 +215,7 @@ export default function Homepage() {
             />
           </div>
 
-          <div className="relative h-52 md:h-auto hidden md:block">
+          <div className="relative h-52 md:h-auto hidden lg:block">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Tharu Cultural Dance
             </h2>
@@ -238,7 +239,7 @@ export default function Homepage() {
         </div>
 
         {/* FOR SM and MD only*/}
-        <div
+        {/* <div
           className="lg:hidden px-5 py-4 -space-y-1 bg-no-repeat"
           style={{ backgroundImage: `url("assets/boat2.png")` }}
         >
@@ -288,11 +289,11 @@ export default function Homepage() {
               majestic creatures in their natural.
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="lg:block hidden">
           {/* background, guide photo and texts */}
-          <div className="relative text-center container mx-auto py-5 ">
+          <div className="relative text-center container mx-auto">
             <Image src={boat2} className="w-full h-auto bg-cover" alt="Boat" />
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="relative flex items-center mx-4 lg:mx-20">
@@ -331,6 +332,10 @@ export default function Homepage() {
             </div>
           </div>
 
+
+
+
+
           {/* Best experiences in chitwan */}
 
           <div className="relative text-center container mx-auto bg-cover">
@@ -341,6 +346,8 @@ export default function Homepage() {
                   className="relative left-4 bg-[#5C2C59] rounded-3xl text-white p-2 text-xs flex justify-center items-center"
                   style={{ width: "700px", height: "400px" }}
                 >
+
+
                   <p className="font-Poppins text-white text-xl text-center absolute inset-0 flex justify-center items-center p-0">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
@@ -356,6 +363,9 @@ export default function Homepage() {
                 </div>
                 <Image
                   src={tourist}
+
+
+          
                   className="relative left-4 inline-block rounded-3xl"
                   alt="Tourist"
                   style={{ width: "450px", height: "500px" }}
@@ -366,80 +376,92 @@ export default function Homepage() {
           </div>
         </div>
 
+
+
         <div className="lg:hidden block">
-          {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
-          <div
-            className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
-            style={{
-              backgroundImage: `url("assets/boat2.png")`,
-              backgroundSize: "cover",
-              backgroundRepeat: "repeat",
-            }}
-          >
-            <div class="flex h-96 max-w-[40rem] items-center justify-center px-4">
-              <div class="flex">
-                <div class="rounded-3xl py-2">
-                  <img
-                    src="https://i.ibb.co/M8KtB3C/7e592e8b55b26d5c9e4d9f3743562904.jpg"
-                    class=""
-                    alt="Guide"
-                  />
-                </div>
-                <div class="font-Poppins flex flex-col items-center justify-center rounded-md bg-[#5c2c59] px-5 text-center text-sm text-white lg:text-xl ">
-                  <p class="">About Guide</p>
-                  <p class="">
-                    Our guide offers a clear, step-by-step approach that makes
-                    even the most complex topics easy to understand. Whether
-                    you're a beginner or an experienced professional, the guide
-                    is designed to provide practical solutions and actionable
-                    insights.
-                  </p>
-                </div>
-              </div>
+        {/* OLD CODE MODIFIED A BIT TO HARD CODE RESPONSIVE FOR MOBILE */}
+        <div
+          className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+          style={{ backgroundImage: `url('assets/boat2.png')` }}
+        >
+          <div className="grid grid-cols-[1fr_2fr]">
+            <div className="rounded-3xl py-3">
+              <Image src={guide} alt="Guide" />
             </div>
-            {/* <div className="grid grid-cols-[1fr_2fr]">
-              <div className="rounded-3xl py-3">
-                <Image src={guide} alt="Guide" />
-              </div>
-              <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
-                <p className="">About Guide</p>
-                <p className="">
-                  Our guide offers a clear, step-by-step approach that makes
-                  even the most complex topics easy to understand. Whether
-                  you're a beginner or an experienced professional, the guide is
-                  designed to provide practical solutions and actionable
-                  insights.
-                </p>
-              </div>
-            </div> */}
-          </div>
-          <div
-            className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
-            style={{
-              backgroundImage: `url("assets/boat-2958283_1280 1.png")`,
-              backgroundSize: "100% 100%",
-              backgroundRepeat: "repeat",
-              backgroundPosition: "top left",
-            }}
-          >
-            <div className="grid grid-cols-[2fr_1fr]">
-              <div className="rounded-md text-white lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
-                
-                <p className="">About Guide</p>
-                <p className="">
-                  Our guide offers a clear, step-by-step approach that makes
-                  even the most complex topics easy to understand. Whether
-                  you're a beginner or an experienced professional, the guide is
-                  designed to provide practical solutions and actionable
-                  insights.
-                </p>
-              </div>
-              <div className="rounded-3xl py-3 bg-cover">
-                <Image src={tourist} alt="Guide" />
-              </div>
+            <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+              <p className="">About Guide</p>
+              <p className="">
+                Our guide offers a clear, step-by-step approach that makes even
+                the most complex topics easy to understand. Whether you're a
+                beginner or an experienced professional, the guide is designed
+                to provide practical solutions and actionable insights.
+              </p>
             </div>
           </div>
         </div>
+        <div
+          className="flex rounded-b-2xl items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+          style={{ backgroundImage: `url('assets/boat22.png')` }}
+        >
+          <div className="grid grid-cols-[2fr_1fr]">
+            <div className="rounded-md text-white lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+              <p className="">About Guide</p>
+              <p className="">
+                Our guide offers a clear, step-by-step approach that makes even
+                the most complex topics easy to understand. Whether you're a
+                beginner or an experienced professional, the guide is designed
+                to provide practical solutions and actionable insights.
+              </p>
+            </div>
+            <div className="rounded-3xl py-3">
+              <Image className="rounded-lg" src={tourist} alt="Guide" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+        {/* <div className="lg:hidden block">
+        <div
+          className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+          style={{ backgroundImage: `url('assets/boat2.png')` }}
+        >
+          <div className="grid grid-cols-[1fr_2fr]">
+            <div className="rounded-3xl py-3">
+              <Image src={guide} alt="Guide" />
+            </div>
+            <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+              <p className="">About Guide</p>
+              <p className="">
+                Our guide offers a clear, step-by-step approach that makes even
+                the most complex topics easy to understand. Whether you're a
+                beginner or an experienced professional, the guide is designed
+                to provide practical solutions and actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
+          style={{ backgroundImage: `url('assets/boat2.png')` }}
+        >
+          <div className="grid grid-cols-[1fr_2fr]">
+            <div className="rounded-3xl py-3">
+              <Image src={guide} alt="Guide" />
+            </div>
+            <div className="rounded-md text-white px-5 lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+              <p className="">About Guide</p>
+              <p className="">
+                Our guide offers a clear, step-by-step approach that makes even
+                the most complex topics easy to understand. Whether you're a
+                beginner or an experienced professional, the guide is designed
+                to provide practical solutions and actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> */}
+        
 
         <div className="bg-[#5C2C59] rounded pb-8 mx-8">
           <h2 className="font-MuseoModerno text-white underline text-2xl font-bold text-center mb-5 pt-5">
@@ -463,8 +485,8 @@ export default function Homepage() {
                   .map((group, i) => (
                     <CarouselItem key={i}>
                       <div className="grid grid-cols-3 gap-5 px-1">
-                        {group.map((review) => (
-                          <STFU review={review} />
+                        {group.map((review, k) => (
+                          <STFU review={review} key={k}/>
                         ))}
                       </div>
                     </CarouselItem>
@@ -511,8 +533,8 @@ export default function Homepage() {
                   .map((group, i) => (
                     <CarouselItem key={i}>
                       <div className="grid grid-cols-2 gap-5 px-1">
-                        {group.map((review) => (
-                          <STFU review={review} />
+                        {group.map((review, k) => (
+                          <STFU review={review} key={k}/>
                         ))}
                       </div>
                     </CarouselItem>
