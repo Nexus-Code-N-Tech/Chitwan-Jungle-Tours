@@ -225,8 +225,6 @@ export default function Homepage() {
             />
           </div>
 
-
-
           <div className="relative h-52 md:h-auto">
             <h2 className="font-MuseoModerno text-white text-xl md:text-2xl w-full font-bold text-center absolute bottom-7">
               Canoeing at Rapti
@@ -254,7 +252,7 @@ export default function Homepage() {
               animals like the one-horned rhino,
             </p>
             <Image
-              className="float-right p-2 mr- m-6"
+              className="float-right p-2  m-6 px-4"
               src={roundedGuide}
               width={120}
               height={120}
@@ -269,7 +267,7 @@ export default function Homepage() {
           <div className="relative break-words py-14 text-white rounded-bl-[70%] bg-gradient-to-bl to-[#802D65] from-30% from-[#5C2C59]">
             <h1 className="font-semibold text-lg px-5 py-4 ">
               Best Experience in Chitwan
-            </h1>
+            </h1> 
             <p className="text-sm px-5 pl-20 mt-3">
               Chitwan is renowned for its exceptional experiences centered
               around its famous national park, home to rare and endangered
@@ -277,7 +275,7 @@ export default function Homepage() {
               and gharial crocodile.
             </p>
             <Image
-              className="float-left p-2 ml-24 mt-2"
+              className="float-left p-2 ml-24 mt-2 px-4"
               src={roundedTourist}
               width={120}
               height={120}
@@ -378,7 +376,28 @@ export default function Homepage() {
               backgroundRepeat: "repeat",
             }}
           >
-            <div className="grid grid-cols-[1fr_2fr]">
+            <div class="flex h-96 max-w-[40rem] items-center justify-center px-4">
+              <div class="flex">
+                <div class="rounded-3xl py-2">
+                  <img
+                    src="https://i.ibb.co/M8KtB3C/7e592e8b55b26d5c9e4d9f3743562904.jpg"
+                    class=""
+                    alt="Guide"
+                  />
+                </div>
+                <div class="font-Poppins flex flex-col items-center justify-center rounded-md bg-[#5c2c59] px-5 text-center text-sm text-white lg:text-xl ">
+                  <p class="">About Guide</p>
+                  <p class="">
+                    Our guide offers a clear, step-by-step approach that makes
+                    even the most complex topics easy to understand. Whether
+                    you're a beginner or an experienced professional, the guide
+                    is designed to provide practical solutions and actionable
+                    insights.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <div className="grid grid-cols-[1fr_2fr]">
               <div className="rounded-3xl py-3">
                 <Image src={guide} alt="Guide" />
               </div>
@@ -392,7 +411,7 @@ export default function Homepage() {
                   insights.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div
             className="flex items-center justify-center h-80 sm:h-[35rem] lg:h-screen px-4"
@@ -405,6 +424,7 @@ export default function Homepage() {
           >
             <div className="grid grid-cols-[2fr_1fr]">
               <div className="rounded-md text-white lg:text-xl h-full text-sm text-center font-Poppins bg-[#5c2c59] flex flex-col justify-center items-center">
+                
                 <p className="">About Guide</p>
                 <p className="">
                   Our guide offers a clear, step-by-step approach that makes
@@ -414,7 +434,7 @@ export default function Homepage() {
                   insights.
                 </p>
               </div>
-              <div className="rounded-3xl py-3">
+              <div className="rounded-3xl py-3 bg-cover">
                 <Image src={tourist} alt="Guide" />
               </div>
             </div>
@@ -595,7 +615,8 @@ export default function Homepage() {
             onClick={toggleExpand}
             className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
               isExpanded ? "scale-105" : "scale-100"
-            }`}>
+            }`}
+          >
             {isExpanded ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
