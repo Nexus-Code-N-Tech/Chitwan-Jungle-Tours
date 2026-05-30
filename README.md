@@ -10,7 +10,7 @@ It includes package pages, itinerary details, a gallery, and a contact flow.
 ## Tech Stack
 
 - Next.js 15
-- React 18
+- React 18.x
 - Tailwind CSS
 - Radix UI components
 - Embla Carousel / Swiper
@@ -78,5 +78,9 @@ Open `http://localhost:3000`.
 The project is configured for standalone Next.js output in `next.config.mjs`:
 
 ```js
-output: "standalone";
+const nextConfig = {
+  output: "standalone",
+};
+
+export default nextConfig;
 ```
