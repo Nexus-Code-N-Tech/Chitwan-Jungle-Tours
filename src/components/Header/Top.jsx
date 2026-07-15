@@ -9,6 +9,7 @@ import Facebook from "../SVG/facebook";
 import Instagram from "../SVG/Instagram";
 import Twitter from "../SVG/Twitter";
 import Whatsapp from "../SVG/whatsapp";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 import Image from "next/image";
 import {usePathname} from "next/navigation";
@@ -73,7 +74,7 @@ export default function () {
             </a>
 
             <a
-              href="https://wa.me/9845043367"
+              href={createWhatsAppLink("Hi, I would like to know more about Chitwan Jungle Tours.")}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"

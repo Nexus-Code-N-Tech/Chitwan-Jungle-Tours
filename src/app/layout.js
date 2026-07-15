@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Top";
+import SideBarMedia from "@/components/Footer/SideBarMedia";
 import "./globals.css";
 import homeimage from "assets/homehome.png"
 
@@ -110,6 +111,7 @@ export default function RootLayout({ children }) {
         }
       >
         <Header />
+        <SideBarMedia />
         {children}
         <Footer />
         <Analytics />

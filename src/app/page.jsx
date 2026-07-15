@@ -5,13 +5,8 @@ import { useRef } from "react";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
 
-import { Menu, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram, faWhatsapp, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import Confetti from "react-confetti";
 import guide from "assets/danphe.jpg";
@@ -120,7 +115,6 @@ const reviews = [
 ];
 
 export default function Homepage() {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const [confetti, setConfetti] = useState(false);
   const stickyButtonRef = useRef(null);
@@ -185,10 +179,6 @@ export default function Homepage() {
     else{
       alert("Failed to submit review. Please try again.");
     }
-  };
-
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
   };
 
   useEffect(() => {
@@ -1321,69 +1311,7 @@ export default function Homepage() {
         />
       )}
 
-      {/* Quick buttons */}
-      <div
-        ref={stickyButtonRef}
-        className={`fixed right-4 flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out z-50 ${
-          isAtBottom ? "bottom-[calc(100vh-5rem)]" : "bottom-4"
-        }`}
-      >
-        {isExpanded && (
-          <div className="flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform">
-            {/* WhatsApp Button */}
-            <div className="p-1 bg-gradient-to-r from-green-400 to-white-500 rounded-full">
-              <button
-                className="p-2 bg-green-500 text-white rounded-full w-12"
-                onClick={() =>
-                  window.open("https://wa.me/9845043367", "_blank")
-                }
-              >
-                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
-              </button>
-            </div>
-
-            {/* Facebook Button */}
-            <div className="p-1 bg-gradient-to-r from-blue-500 to-white-600 rounded-full">
-              <button
-                className="p-2 bg-blue-500 text-white rounded-full w-12"
-                onClick={() =>
-                  window.open(
-                    "https://www.facebook.com/fule.chaudhary",
-                    "_blank"
-                  )
-                }
-              >
-                <FontAwesomeIcon icon={faFacebookF} size="lg" />
-              </button>
-            </div>
-
-            {/* Instagram Button */}
-            <div className="p-1 bg-gradient-to-r from-pink-500 to-white-500 rounded-full">
-              <button
-                className="p-2 bg-pink-500 text-white rounded-full w-12"
-                onClick={() =>
-                  window.open(
-                    "https://www.instagram.com/chitwanjungle01/",
-                    "_blank"
-                  )
-                }
-              >
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Main Toggle Button with Icons */}
-        <button
-          onClick={toggleExpand}
-          className={`p-4 bg-blue-600 text-white rounded-full transition-all duration-1000 ease-in-out transform hover:bg-blue-700 ${
-            isExpanded ? "scale-105" : "scale-100"
-          }`}
-        >
-          {isExpanded ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+      <div ref={stickyButtonRef} className="hidden" />
     </>
   );
 }

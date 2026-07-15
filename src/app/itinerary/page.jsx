@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 import rhinoceros from "assets/itineryBanner1.png";
 import "./itinerary.css";
 import Link from "next/link";
@@ -265,7 +266,14 @@ export default function Itinerary() {
               <br />
               <strong>Contact:</strong> +977 9845043367
               <br />
-              <strong>WhatsApp:</strong> <a href="https://wa.me/9845043367">+977 9845043367</a>
+              <strong>WhatsApp:</strong>{" "}
+              <a
+                href={createWhatsAppLink("Hi, I would like to ask about the 12-day itinerary.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +977 9845043367
+              </a>
               <br />
               <strong>Email:</strong> <a href="mailto:chaudharyfule@gmail.com">chaudharyfule@gmail.com</a>
               <br />

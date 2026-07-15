@@ -3,6 +3,7 @@ import Image from "next/image";
 import Phone from "@/components/SVG/phone";
 import Facebook from "@/components/SVG/facebook";
 import Link from "next/link";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export default function () {
   return (
@@ -64,8 +65,9 @@ export default function () {
                   Instagram
                 </a>
                 <a
-                  href="https://wa.me/9845043367"
+                  href={createWhatsAppLink("Hi, I would like to enquire about Chitwan tour packages.")}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:underline"
                 >
                   WhatsApp
@@ -88,6 +90,7 @@ export default function () {
                 <a
                   href="https://www.facebook.com/fule.chaudhary"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   facbook.com
                 </a>
